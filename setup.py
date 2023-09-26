@@ -49,7 +49,7 @@ class BuildExtWithDLL(setuptools.command.build_ext.build_ext):
 def main(build_cffi=True):
     build_path = os.path.join("src", "google_crc32c_build.py")
     builder = "{}:FFIBUILDER".format(build_path)
-    cffi_dep = "cffi >= 1.0.0"
+    cffi_dep = "cffi == 1.15.1"
 
     setuptools.setup(
         packages=["google_crc32c"],
